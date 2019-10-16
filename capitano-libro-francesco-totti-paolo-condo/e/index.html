@@ -34,45 +34,7 @@
 
 
 
-<script type="text/x-template" id="RRButtons">
 
-    <div class="circle-button__wrapper">
-
-        <!--Wishlist Button-->
-        <div v-if="wishlist.show" :class="{'circle-button__item circle-button__basket' : true }">
-
-            <span class="circle-button__tooltip">Aggiunto alla lista dei desideri</span>
-
-        </div>
-
-        <!--Cart Button-->
-        <div v-if="cart.show" :class="{'circle-button__item circle-button__basket' : true, 'hide-on-ios' : ebook }">
-
-            <a href="javascript:void(0)"
-               data-tracking-intent="add-to-cart"
-               data-aid ="add_to_cart_from_carousel"
-               data-tracking-ignore="false"
-               data-context="addToCart"
-               v-on:click="addToCart"
-               :class="{'loading' : true, 'not-clickable' : cart.status == 2}">
-
-                <span v-if="cart.status == 0 || cart.status == 1" class="circle-button__icon icon-carrello-pieno24"></span>
-                <span v-if="cart.status == 1" class="circle-button__icon icon-spunta24"></span>
-                <span v-else-if="cart.status == 2" class="circle-button__icon circle-button__icon--error icon-x24"></span>
-
-                <div class="spinner__wrapper" v-show="cart.loading">
-                    <div class="spinner__container">
-                        <img class="spinner__image" src="/Content/images/spinner.gif" height="60">
-                    </div>
-                </div>
-            </a>
-
-            <span v-show="cart.status != 0" class="circle-button__tooltip">{{cart.message}}</span>
-        </div>
-
-    </div>
-
-</script>
 
 
     <!-- headbegin -->
@@ -680,7 +642,7 @@ var appInsights=window.appInsights||function(a){function b(a){c[a]=function(){va
     var gigya_socializeUrl = "https://socialize.eu1.gigya.com";
 
     var gigya_enabled = "false";
-    var facebook_apiKey = "308707959474077";
+    //var facebook_apiKey = "308707959474077";
     var google_apiKey = "137264507280-qdtv2dpkcec5nr6idrjqt7vt169l0u96.apps.googleusercontent.com";
 </script>
 
